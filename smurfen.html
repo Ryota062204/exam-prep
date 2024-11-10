@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smurfs Albums</title>
+    <style>
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-container input, 
+        .filter-container select, 
+        .filter-container button {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .album-container {
+            margin-top: 20px;
+        }
+
+        .album-block {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        .album-title, .album-year {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .album-title {
+            font-style: italic;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-container">
+        <button class="utility-buttons" id="all-albums">Show Albums</button>
+        <input type="text" id="year-filter" placeholder="Filter by Year" />
+        <select id="year-dropdown">
+            <option value="">Select Year</option>
+        </select>
+        <input type="text" id="title-filter" placeholder="Filter by Title (NL)" />
+        <select id="title-dropdown-nl">
+            <option value="">Select Title (NL)</option>
+        </select>
+        <select id="title-dropdown-fr">
+            <option value="">Select Title (FR)</option>
+        </select>
+        <button id="apply-filter">Apply Filter</button>
+    </div>
+
+    <div class="album-container"></div>
+
+    <div class="nav-buttons">
+        <button id="prev-albums">Previous</button>
+        <button id="next-albums">Next</button>
+    </div>
+
+    <template>
+        <div class="album-block">
+            <p class="album-id"></p>
+            <p class="album-nl"></p>
+            <p class="album-fr"></p>
+            <p class="album-year"></p>
+        </div>
+    </template>
+
+    <script src="smurfen.js"></script>
+</body>
+</html>

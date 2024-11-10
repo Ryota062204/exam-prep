@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <style>
+        .quote-container {
+            margin-top: 20px;
+        }
+        .quote-block {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .quote-text {
+            font-style: italic;
+        }
+        .quote-author {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 5px;
+        }
+        .quote-genre {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class="utility-buttons" id="all-quotes">Show Quotes</button>
+
+    <div>
+        <input type="text" id="author-filter" placeholder="Filter by Author" />
+        <input type="text" id="genre-filter" placeholder="Filter by Genre" />
+
+        <button id="apply-filter">Apply Filter</button>
+    </div>
+
+    <div class="quote-container"></div>
+
+    <div>
+        <button id="prev-quotes" disabled>Previous</button>
+        <button id="next-quotes" disabled>Next</button>
+    </div>
+
+    <template>
+        <div class="quote-block">
+            <p class="quote-text"></p>
+            <p class="quote-author"></p>
+            <p class="quote-genre"></p>
+        </div>
+    </template>
+
+    <script src="randomQuote.js"></script>
+</body>
+</html>
