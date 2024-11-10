@@ -24,27 +24,33 @@
             margin-top: 5px;
         }
         .quote-genre {
-            font-weight: bold;
             text-align: right;
             margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <button class="utility-buttons" id="all-quotes">Show Quotes</button>
-
-    <div>
+    <div class="filter-container">
+        <button class="utility-buttons" id="all-quotes">Show All Quotes</button>
+        
         <input type="text" id="author-filter" placeholder="Filter by Author" />
+        <select id="author-dropdown">
+            <option value="">Select Author</option>
+        </select>
+        
         <input type="text" id="genre-filter" placeholder="Filter by Genre" />
-
+        <select id="genre-dropdown">
+            <option value="">Select Genre</option>
+        </select>
+        
         <button id="apply-filter">Apply Filter</button>
     </div>
 
     <div class="quote-container"></div>
 
     <div>
-        <button id="prev-quotes" disabled>Previous</button>
-        <button id="next-quotes" disabled>Next</button>
+        <button id="prev-quotes">Previous</button>
+        <button id="next-quotes">Next</button>
     </div>
 
     <template>
